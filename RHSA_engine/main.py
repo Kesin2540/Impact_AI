@@ -75,7 +75,7 @@ def analyze_patch(rhsa_id):
     reports_dir = "reports"
     os.makedirs(reports_dir, exist_ok=True)
 
-    csv_path = os.path.join(reports_dir, "sre_reports.csv")
+    csv_path = os.path.join(reports_dir, "rhel_engine_reports.csv")
     file_exists = os.path.exists(csv_path)
     needs_header = not file_exists or os.path.getsize(csv_path) == 0
 
