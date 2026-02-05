@@ -1,6 +1,7 @@
 from audit_engine import package_execution_domain, get_service_context, get_live_signal_assessment, HIGH_BLAST_LIBRARIES, advisory_requires_reboot, extract_restart_services
 from data_fetcher import fetch_csaf, extract_impact_data, analyze_reverse_deps
 from llm_processor import llm_assess
+from temp2 import RHSA
 import json
 import os
 import csv
@@ -124,5 +125,7 @@ def analyze_patch(rhsa_id):
     }
 
 if __name__ == "__main__":
+
+    
     rhsa = input("Enter RHSA (e.g., RHSA-2023:1673): ").strip()
     print(json.dumps(analyze_patch(rhsa), indent=2))

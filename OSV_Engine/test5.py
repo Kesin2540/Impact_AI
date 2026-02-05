@@ -79,7 +79,6 @@ def extract_fixed_versions(vulns):
                             continue
 
     return sorted(fixes, key=Version)
-
 # -----------------------------
 # Version Delta Logic
 # -----------------------------
